@@ -1,0 +1,51 @@
+# Core Data Processing
+numpy
+pandas
+
+# PDF Processing
+pymupdf
+
+# RAG Framework
+langchain
+langchain-community
+langchain-core
+
+# Local LLM (Ollama)
+langchain-ollama
+ollama
+
+# Embeddings
+sentence-transformers
+
+# Vector Database
+faiss-cpu
+
+# API Backend
+fastapi
+uvicorn
+
+# Environment Variables
+python-dotenv
+
+# Data Versioning
+dvc
+
+# Experiment Tracking
+mlflow
+
+# Utilities
+pyyaml
+tqdm
+python-box
+ensure
+
+# Notebooks
+jupyter
+ipykernel
+
+# Visualization
+matplotlib
+seaborn
+
+# Testing
+pytest

@@ -1,0 +1,15 @@
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+class textchunk:
+
+
+    def create_chunks(self,text):
+        splitter = RecursiveCharacterTextSplitter(
+            chunk_size = 200,
+            chunk_overlap = 50
+        )
+
+        chunks = splitter.split_text(text)
+
+        return chunks
+    
