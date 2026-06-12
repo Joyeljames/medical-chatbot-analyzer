@@ -1,4 +1,5 @@
 from src.components.chunking import textchunk
+import pickle
 
 with open("artifacts/clean_text/clean_report.txt","r",
           encoding="latin-1"
@@ -17,7 +18,7 @@ print("total_chunks",len(chunking))
 #save chunk
 
 with open(
-    "artifacts/chunks/chunking_report.txt","w",
+    "artifacts/chunks/chunking_report.pkl","w",
     encoding="latin-1"
 ) as f:
     for i,chunk in enumerate(chunking):
