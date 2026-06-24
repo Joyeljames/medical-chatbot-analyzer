@@ -24,24 +24,31 @@ class RagSummarizer:
     
     def generate_summary(self,context):
 
-        prompt  = f"""
-        You are an expert medical assistant
+        prompt = f"""
+        You are a medical report analyzer.
 
-        summarize The report
+        Using ONLY the provided context, generate a structured report.
 
-        context: {context}
+        Context:
+        {context}
 
-        provide:
-        1.Key findings
+        Return exactly these sections:
 
-        2.Normal/Healthy Finding
+        ## Key Findings
 
-        3.Abnormal Values
+        ## Normal / Healthy Findings
 
-        4.Recommendations
+        ## Abnormal Values
 
-        use bullets points
-    """
+        ## Recommendations
+
+        Do not explain that you are an AI.
+        Do not say "As an expert medical assistant".
+        Use bullet points.
+        Keep the response concise and professional.
+        """
+
+   
         response =self.llm.invoke(prompt)
 
         logging.info("summary generated succesfully")
