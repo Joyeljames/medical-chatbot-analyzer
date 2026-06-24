@@ -1,8 +1,9 @@
 from langchain_ollama import ChatOllama
 import logging
 
-
+from src.components.vectore_store import vectorstoreManager
 import os
+vector = vectorstoreManager()
 
 LOG_DIR = "logs"
 
@@ -54,3 +55,8 @@ class RagSummarizer:
         logging.info("summary generated succesfully")
 
         return response.content
+    
+    def reload_vectores(self):
+      
+        self.vectorstore = vector.load_vectore()
+        self.retriever = self.vectorstore.as_retriever(search_kwargs={"k":2})

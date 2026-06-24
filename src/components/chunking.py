@@ -5,11 +5,11 @@ class textchunk:
 
     def create_chunks(self,text):
         splitter = RecursiveCharacterTextSplitter(
-            chunk_size = 200,
-            chunk_overlap = 50
+            chunk_size = 1000,
+            chunk_overlap = 200
         )
 
-        chunks = splitter.split_text(text)
+        chunks = splitter.create_documents([text])
 
         return chunks
     
